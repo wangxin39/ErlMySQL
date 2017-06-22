@@ -175,5 +175,5 @@ binary_xor(A, B) ->
 %
 crypto_hash(Bin) ->
   try crypto:hash(sha, Bin) catch
-    _:_ -> crypto:sha(Bin)
+    _:_ -> crypto:hash(Bin)
   end.
